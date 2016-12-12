@@ -1,14 +1,6 @@
-//
-//  ViewController.swift
-//  DreamLister
-//
-//  Created by Christine Cunniff on 12/12/16.
-//  Copyright © 2016 Christine Cunniff. All rights reserved.
-//
-
 import UIKit
 
-class ViewController: UIViewController {
+class MainVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
