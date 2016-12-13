@@ -1,6 +1,6 @@
 import UIKit
 
-class MainVC: UIViewController, UITabBarDelegate, UITableViewDataSource {
+class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var segment: UISegmentedControl!
