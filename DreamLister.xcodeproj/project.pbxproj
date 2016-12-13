@@ -22,6 +22,7 @@
 		F4DD49331DFF2FC400DC58C3 /* Store+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4DD492B1DFF2FC400DC58C3 /* Store+CoreDataClass.swift */; };
 		F4DD49341DFF2FC400DC58C3 /* Store+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4DD492C1DFF2FC400DC58C3 /* Store+CoreDataProperties.swift */; };
 		F4DD49371DFF3C1600DC58C3 /* MaterialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4DD49361DFF3C1600DC58C3 /* MaterialView.swift */; };
+		F4DD49391E0046E100DC58C3 /* ItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4DD49381E0046E100DC58C3 /* ItemCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		F4DD492B1DFF2FC400DC58C3 /* Store+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Store+CoreDataClass.swift"; sourceTree = "<group>"; };
 		F4DD492C1DFF2FC400DC58C3 /* Store+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Store+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		F4DD49361DFF3C1600DC58C3 /* MaterialView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaterialView.swift; sourceTree = "<group>"; };
+		F4DD49381E0046E100DC58C3 /* ItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +116,7 @@
 			isa = PBXGroup;
 			children = (
 				F4DD49361DFF3C1600DC58C3 /* MaterialView.swift */,
+				F4DD49381E0046E100DC58C3 /* ItemCell.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -190,6 +193,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F4DD49391E0046E100DC58C3 /* ItemCell.swift in Sources */,
 				F4DD492F1DFF2FC400DC58C3 /* ItemType+CoreDataClass.swift in Sources */,
 				F4D76E871DFF20EB00863718 /* MainVC.swift in Sources */,
 				F4DD492E1DFF2FC400DC58C3 /* Image+CoreDataProperties.swift in Sources */,
