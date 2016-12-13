@@ -133,6 +133,10 @@
                             <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="segment" destination="4Gr-b8-8sI" id="n7h-7f-pO7"/>
+                        <outlet property="tableView" destination="Yei-bj-stF" id="7oS-rm-oen"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
