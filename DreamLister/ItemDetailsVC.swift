@@ -6,6 +6,8 @@ class ItemDetailsVC: UIViewController, UIPickerViewDataSource, UIPickerViewDeleg
     @IBOutlet weak var titleField: CustomTextField!
     @IBOutlet weak var priceField: CustomTextField!
     @IBOutlet weak var detailsField: CustomTextField!
+    
+    var stores = [Store]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,19 +20,20 @@ class ItemDetailsVC: UIViewController, UIPickerViewDataSource, UIPickerViewDeleg
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        
+        let store = stores[row]
+        return store.name
     }
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        <#code#>
+        return stores.count
     }
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
-        <#code#>
+        return 1
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        <#code#>
+        //TO DO: update when selected
     }
 
 }
