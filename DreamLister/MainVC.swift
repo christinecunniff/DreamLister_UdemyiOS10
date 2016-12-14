@@ -14,8 +14,8 @@ class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource, NSFe
         tableView.delegate = self
         tableView.dataSource = self
         
-        attemptFetch()
         generateTestData()
+        attemptFetch()
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -116,6 +116,8 @@ class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource, NSFe
         item3.title = "A comfy robe"
         item3.price = 20
         item3.details = "There is absolutely nothing like a comfy robe when its cold outside. I love relaxing!"
+        
+        ad.saveContext()
     }
 
 }
