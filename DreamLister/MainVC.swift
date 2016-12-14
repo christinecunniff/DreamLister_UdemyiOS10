@@ -22,7 +22,8 @@ class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource, NSFe
     }
     
     func configureCell(cell: ItemCell, indexPath: NSIndexPath) {
-        //TO DO: update cell
+        let item = controller.object(at: indexPath as IndexPath)
+        cell.configureCell(item: item)
     }
     
     
