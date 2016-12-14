@@ -1,4 +1,5 @@
 import UIKit
+import CoreData
 
 class ItemDetailsVC: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
     
@@ -17,6 +18,21 @@ class ItemDetailsVC: UIViewController, UIPickerViewDataSource, UIPickerViewDeleg
         }
         storePicker.delegate = self
         storePicker.dataSource = self
+        
+        let store = Store(context: context)
+        store.name = "Best Buy"
+        let store2 = Store(context: context)
+        store2.name = "Tesla Dealership"
+        let store3 = Store(context: context)
+        store3.name = "Frys Electronics"
+        let store4 = Store(context: context)
+        store4.name = "Target"
+        let store5 = Store(context: context)
+        store5.name = "Amazon"
+        let store6 = Store(context: context)
+        store6.name = "K Mart"
+        
+        ad.saveContext()
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
@@ -34,6 +50,17 @@ class ItemDetailsVC: UIViewController, UIPickerViewDataSource, UIPickerViewDeleg
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         //TO DO: update when selected
+    }
+    
+    func getStores() {
+        let fetchRequest: NSFetchRequest<Store> = Store.fetchRequest()
+        
+        do {
+            self.stores = try context.fetch(fetchRequest)
+            self.storePicker.reloadAllComponents()
+        } catch {
+            //TO DO: handle the error
+        }
     }
 
 }
