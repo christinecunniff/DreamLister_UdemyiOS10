@@ -83,7 +83,7 @@ class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource, NSFe
         case.update:
             if let indexPath = indexPath {
                 let cell = tableView.cellForRow(at: indexPath) as! ItemCell
-                //TO DO: update the cell data
+                configureCell(cell: cell, indexPath: indexPath as NSIndexPath)
             }
         case.move:
             if let indexPath = indexPath {
