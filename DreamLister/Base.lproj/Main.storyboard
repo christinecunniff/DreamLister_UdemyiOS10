@@ -131,16 +131,38 @@
                     <navigationItem key="navigationItem" title="DreamLister" id="n1i-HO-ALD">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="WU2-mz-mKW">
                             <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <segue destination="dkS-Pf-pwm" kind="show" identifier="ItemDetailsVCNew" id="yU9-js-kjx"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="segment" destination="4Gr-b8-8sI" id="n7h-7f-pO7"/>
                         <outlet property="tableView" destination="Yei-bj-stF" id="7oS-rm-oen"/>
+                        <segue destination="dkS-Pf-pwm" kind="show" identifier="ItemDetailsVC" id="3Cs-YN-K7a"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="853.60000000000002" y="792.95352323838085"/>
+        </scene>
+        <!--Item DetailsVC-->
+        <scene sceneID="5rk-Ht-et1">
+            <objects>
+                <viewController id="dkS-Pf-pwm" customClass="ItemDetailsVC" customModule="DreamLister" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="4DC-gS-6Uz"/>
+                        <viewControllerLayoutGuide type="bottom" id="TM5-LR-3Sx"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="sVd-cH-M3X">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0PD-BF-qX1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1614" y="793"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="btx-f5-jkR">
@@ -168,4 +190,7 @@
     <resources>
         <image name="subaru" width="602" height="310"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="3Cs-YN-K7a"/>
+    </inferredMetricsTieBreakers>
 </document>
