@@ -112,6 +112,7 @@ class ItemDetailsVC: UIViewController, UIPickerViewDataSource, UIPickerViewDeleg
             titleField.text = item.title
             priceField.text = "\(item.price)"
             detailsField.text = item.details
+            thumbImg.image = item.toImage?.image as? UIImage
             
             if let store = item.toStore {
                 var index = 0
