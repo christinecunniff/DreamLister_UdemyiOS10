@@ -69,7 +69,7 @@ class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource, NSFe
         let fetchRequest: NSFetchRequest<Item> = Item.fetchRequest()
         let dateSort = NSSortDescriptor(key: "created", ascending: false)
         let priceSort = NSSortDescriptor(key: "price", ascending: true)
-        let titleSort = NSSortDescriptor(key: "title", ascending: true)
+        let titleSort = NSSortDescriptor(key: "title", ascending: true, selector:#selector(NSString.localizedCaseInsensitiveCompare(_:)) )
         
         if segment.selectedSegmentIndex == 0 {
             fetchRequest.sortDescriptors = [dateSort]
