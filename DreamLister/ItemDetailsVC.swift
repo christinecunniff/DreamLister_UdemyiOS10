@@ -77,6 +77,10 @@ class ItemDetailsVC: UIViewController, UIPickerViewDataSource, UIPickerViewDeleg
     @IBAction func savePressed(_ sender: UIButton) {
         
         var item: Item!
+        let picture = Image(context: context)
+        picture.image = thumbImg.image
+        
+        item.toImage = picture
         
         if itemToEdit == nil {
             item = Item(context: context)
