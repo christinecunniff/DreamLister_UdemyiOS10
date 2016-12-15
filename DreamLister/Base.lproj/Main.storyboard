@@ -261,6 +261,9 @@
                     <navigationItem key="navigationItem" title="Add/Edit" id="Gg2-cE-nJY">
                         <barButtonItem key="rightBarButtonItem" systemItem="trash" id="8gM-30-yht">
                             <color key="tintColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="deletePressed:" destination="dkS-Pf-pwm" id="z4b-Qh-hcP"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
@@ -303,6 +306,6 @@
         <image name="subaru" width="602" height="310"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="3Cs-YN-K7a"/>
+        <segue reference="yU9-js-kjx"/>
     </inferredMetricsTieBreakers>
 </document>
