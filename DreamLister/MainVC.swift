@@ -68,7 +68,16 @@ class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource, NSFe
     func attemptFetch() {
         let fetchRequest: NSFetchRequest<Item> = Item.fetchRequest()
         let dateSort = NSSortDescriptor(key: "created", ascending: false)
-        fetchRequest.sortDescriptors = [dateSort]
+        let priceSort = NSSortDescriptor(key: "price", ascending: true)
+        let titleSort = NSSortDescriptor(key: "title", ascending: true)
+        
+        if segment.selectedSegmentIndex == 0 {
+            fetchRequest.sortDescriptors = [dateSort]
+        } else if segment.selectedSegmentIndex == 1 {
+            fetchRequest.sortDescriptors = [priceSort]
+        } else if segment.selectedSegmentIndex == 2 {
+            fetchRequest.sortDescriptors = [titleSort]
+        }
         
         let controller = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: context, sectionNameKeyPath: nil, cacheName: nil)
         
@@ -81,6 +90,11 @@ class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource, NSFe
             let error = error as NSError
             print("\(error)")
         }
+    }
+    
+    @IBAction func segmentChange(_ sender: Any) {
+        attemptFetch()
+        tableView.reloadData()
     }
     
     func controllerWillChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
@@ -118,24 +132,24 @@ class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource, NSFe
         
     }
     
-    func generateTestData() {
-        
-        let item = Item(context: context)
-        item.title = "MacBook Pro"
-        item.price = 1800
-        item.details = "I can't wait until the September event. I hope they release new MBP's!"
-        
-        let item2 = Item(context: context)
-        item2.title = "Bose Headphones"
-        item2.price = 300
-        item2.details = "These headphones are supposed to be pretty good."
-        
-        let item3 = Item(context: context)
-        item3.title = "Tesla"
-        item3.price = 20000000
-        item3.details = "What a car!"
-        
-        ad.saveContext()
+   func generateTestData() {
+//        
+//        let item = Item(context: context)
+//        item.title = "MacBook Pro"
+//        item.price = 1800
+//        item.details = "I can't wait until the September event. I hope they release new MBP's!"
+//        
+//        let item2 = Item(context: context)
+//        item2.title = "Bose Headphones"
+//        item2.price = 300
+//        item2.details = "These headphones are supposed to be pretty good."
+//        
+//        let item3 = Item(context: context)
+//        item3.title = "Tesla"
+//        item3.price = 20000000
+//        item3.details = "What a car!"
+//        
+//        ad.saveContext()
     }
 
 }
